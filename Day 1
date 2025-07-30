@@ -1,0 +1,27 @@
+1) Python if-else :
+
+n = int(input().strip())
+check = {True: "Not Weird", False: "Weird"}
+
+print(check[
+        n%2==0 and (
+            n in range(2,6) or 
+            n > 20)
+    ])
+
+2)Arithmetic Operators :
+def add(x, y):
+    return x + y
+
+def sub(x, y):
+    return x - y
+
+def multi(x, y):
+    return x * y
+
+a = int(input())
+b = int(input())
+
+print(add(a, b))
+print(sub(a, b))
+print(multi(a, b))

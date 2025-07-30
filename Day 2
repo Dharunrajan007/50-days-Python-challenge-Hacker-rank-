@@ -1,9 +1,0 @@
-def square_recursive(n):
-    if n == 0:
-        print(0)
-        return
-    square_recursive(n - 1)
-    print(n ** 2)
-
-n = int(input())
-square_recursive(n - 1)
