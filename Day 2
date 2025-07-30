@@ -1,0 +1,21 @@
+1) Python Division :
+
+value1 =int(input())
+value2 =int(input())
+c=int(value1/value2)
+d=float(value1/value2)
+print(c)
+print(d)
+
+2)Loops :
+
+def square_recursive(n):
+    if n == 0:
+        print(0)
+        return
+    square_recursive(n - 1)
+    print(n ** 2)
+
+n = int(input())
+square_recursive(n - 1)
+  
