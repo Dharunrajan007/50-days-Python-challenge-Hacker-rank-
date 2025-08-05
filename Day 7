@@ -1,0 +1,22 @@
+List:
+N = int(input())
+target = []
+
+for _ in range(N):
+    command = input().split()
+    action = command[0]
+
+    if action == "insert":
+        target.insert(int(command[1]), int(command[2]))
+    elif action == "print":
+        print(target)
+    elif action == "remove":
+        target.remove(int(command[1]))
+    elif action == "append":
+        target.append(int(command[1]))
+    elif action == "sort":
+        target.sort()
+    elif action == "pop":
+        target.pop()
+    elif action == "reverse":
+        target.reverse()
