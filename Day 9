@@ -1,0 +1,9 @@
+1)merge the tool !
+def merge_the_tools(s, k):
+    for i in range(0, len(s), k):
+        t = s[i:i+k]
+        u = ''
+        for char in t:
+            if char not in u:
+                u += char
+        print(u)
