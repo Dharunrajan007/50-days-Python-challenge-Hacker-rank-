@@ -1,0 +1,32 @@
+Finding angle
+
+import math
+AB = float(input())
+BC = float(input())
+A_x, A_y = 0, AB
+B_x, B_y = 0, 0
+C_x, C_y = BC, 0
+
+M_x = (A_x + C_x) / 2
+M_y = (A_y + C_y) / 2
+
+MB_x = B_x - M_x
+MB_y = B_y - M_y
+
+CB_x = B_x - C_x
+CB_y = B_y - C_y
+
+dot = MB_x * CB_x + MB_y * CB_y
+length_MB = math.sqrt(MB_x**2 + MB_y**2)
+length_CB = math.sqrt(CB_x**2 + CB_y**2)
+
+
+if length_MB == 0 or length_CB == 0:
+    print("0 degrees")
+else:
+    cos_theta = dot / (length_MB * length_CB)
+    cos_theta = max(-1.0, min(1.0, cos_theta))  # Clamp to valid range
+    angle_rad = math.acos(cos_theta)
+    angle_deg = math.degrees(angle_rad)
+
+    print(f"{int(round(angle_deg))}\u00B0")
