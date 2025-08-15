@@ -1,0 +1,16 @@
+import sys
+from collections import Counter
+
+def main():
+    data = sys.stdin.read().strip().split()
+    if not data:
+        print(0)
+        return
+    n = int(data[0])
+    colors = list(map(int, data[1:1+n]))
+    counts = Counter(colors)
+    pairs = sum(c // 2 for c in counts.values())
+    print(pairs)
+
+if _name_ == "_main_":
+    main()
