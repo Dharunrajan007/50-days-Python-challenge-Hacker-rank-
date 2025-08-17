@@ -1,0 +1,10 @@
+def lonely_integer(arr):
+    result = 0
+    for num in arr:
+        result ^= num   
+    return result
+
+if __name__ == "__main__":
+    n = int(input().strip())
+    arr = list(map(int, input().split()))
+    print(lonely_integer(arr))
