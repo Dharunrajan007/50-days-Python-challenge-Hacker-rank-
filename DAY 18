@@ -1,0 +1,16 @@
+def counting_valleys(steps, path):
+    level = 0
+    valleys = 0
+    for step in path:
+        if step == 'U':
+            level += 1
+            if level == 0:
+                valleys += 1
+        else:
+            level -= 1
+    return valleys
+
+if __name__ == "__main__":
+    n = int(input())
+    s = input().strip()
+    print(counting_valleys(n, s))
