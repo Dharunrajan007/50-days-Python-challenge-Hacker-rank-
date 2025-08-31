@@ -1,0 +1,6 @@
+def migratoryBirds(arr):
+    freq = {}
+    for bird in arr:
+        freq[bird] = freq.get(bird, 0) + 1
+    max_count = max(freq.values())
+    return min([bird for bird, count in freq.items() if count == max_count])
