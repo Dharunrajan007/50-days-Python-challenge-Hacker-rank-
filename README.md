@@ -1,1 +1,1 @@
-# 50-days-Python-challenge-Hacker-rank-
+# 50-days-Python-challenge-
