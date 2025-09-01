@@ -1,0 +1,7 @@
+from collections import Counter
+
+words = input().strip().split()
+freq = Counter(words)
+
+for word in sorted(freq):
+    print(word, freq[word])
