@@ -1,0 +1,14 @@
+def grading_students(grades):
+    result = []
+    for g in grades:
+        if g >= 38 and (g % 5) >= 3:
+            result.append(g + (5 - g % 5))
+        else:
+            result.append(g)
+    return result
+
+if __name__ == "__main__":
+    n = int(input())
+    grades = [int(input()) for _ in range(n)]
+    for g in grading_students(grades):
+        print(g)
